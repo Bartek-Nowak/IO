@@ -15,6 +15,13 @@ bool is_prime(int number) {
 }
 
 int main() {
+    int number;
+    cin >> number;
+
+    if(is_prime(number))
+        cout << number << " is prime." << endl;
+    else
+        cout << number << " is not prime." << endl;
 
     return 0;
 }
