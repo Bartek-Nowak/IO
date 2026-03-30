@@ -23,14 +23,37 @@ bool is_prime(int number) {
 }
 
 int main() {
-    int number;
-    cin >> number;
-    cout << compute_factorial(number);
+    int a, b;
+    cout << "Podaj dwie liczby calkowite: ";
+    cin >> a >> b;
 
-    if(is_prime(number))
-        cout << number << " is prime." << endl;
-    else
-        cout << number << " is not prime." << endl;
+    int wyjscie;
+    do {
+        cout << "\nMENU\n";
+        cout << "Podaj numer czynnosci, ktora chcesz wykonac:\n";
+        cout << "1. Oblicz silnie liczby a\n";
+        cout << "2. Sprawdz czy liczba a jest pierwsza\n";
+        cout << "0. Wyjscie\n";
+        cin >> wyjscie;
+
+        switch(wyjscie) {
+            case 1:
+                cout << a << "! = " << compute_factorial(a) << endl;
+                break;
+            case 2:
+                if(is_prime(a))
+                    cout << a << " jest liczba pierwsza." << endl;
+                else
+                    cout << a << " nie jest liczba pierwsza." << endl;
+                break;
+            case 0:
+                cout << "Koniec programu." << endl;
+                break;
+            default:
+                cout << "Nieprawidlowy numer czynnosci!" << endl;
+        }
+
+    } while(wyjscie != 0);
 
     return 0;
 }
