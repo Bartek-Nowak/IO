@@ -12,7 +12,9 @@ int compute_factorial(int number) {
 
 
 int main() {
-
+    int number;
+    cin >> number;
+    cout << compute_factorial(number);
 
     return 0;
 }
